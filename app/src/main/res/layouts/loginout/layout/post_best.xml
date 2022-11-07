@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroud"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_TopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/post_UserImg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/store_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post_UserNick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="username"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/post_UserImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post_PostDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="2021-11-25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/post_UserImg"
+            app:layout_constraintTop_toBottomOf="@id/post_UserNick" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/post_PostImage"
+        android:layout_width="394dp"
+        android:layout_height="415dp"
+        android:src="@drawable/plant1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_TopLayout" />
+
+    <ImageView
+        android:id="@+id/post_Like"
+        android:layout_width="38dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:src="@drawable/post_ic_eplant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_PostImage" />
+
+    <TextView
+        android:id="@+id/post_LikeNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:text="10"
+        app:layout_constraintBottom_toTopOf="@+id/post_PostExplain"
+        app:layout_constraintEnd_toStartOf="@+id/post_PostChat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/post_Like"
+        app:layout_constraintTop_toBottomOf="@+id/post_PostImage"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/post_PostChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:src="@drawable/post_ic_chat"
+        app:layout_constraintStart_toEndOf="@+id/post_Like"
+        app:layout_constraintTop_toBottomOf="@id/post_PostImage" />
+
+    <ImageView
+        android:id="@+id/post_PostShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:src="@drawable/post_ic_share"
+        app:layout_constraintStart_toEndOf="@+id/post_PostChat"
+        app:layout_constraintTop_toBottomOf="@id/post_PostImage" />
+
+    <TextView
+        android:id="@+id/post_PostExplain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="몬스테라(학명: Monstera deliciosa 몬스테라 델리키오사)는 천남성과의 반덩굴성 식물로 열대 아메리카가 원산지이다. \n약 20여 종의 큰 목본 덩굴식물인 몬스테라는 다른 식물을 타고 올라가면서 자라는 착생식물이다."
+        app:layout_constraintTop_toBottomOf="@id/post_Like"
+        tools:ignore="MissingConstraints" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/add_post"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:clickable="true"-->
+<!--        android:foregroundGravity="center"-->
+<!--        app:backgroundTint="#A6E85A"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_edit"-->
+<!--        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

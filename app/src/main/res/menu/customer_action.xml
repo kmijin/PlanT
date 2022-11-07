@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item android:id="nav_search"-->
+<!--        android:title="Search"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:icon="@drawable/search_icon"/>-->
+
+<!--    <item android:id="nav_menu"-->
+<!--        android:title="Setting"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:icon="@drawable/menu_icon"/>-->
+</menu>

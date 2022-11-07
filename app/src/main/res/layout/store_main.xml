@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    // 프레임 안에 가로 스크롤이 있기 때문에 프레임으로 겉을 감쌈
+
+    <FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">// 카테고리 밑부분부터 세로 스크롤바를 만들기 위한 프레임
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"> // 세로 스크롤바
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"> // 레이아웃 설정
+
+                <FrameLayout
+                    android:id="@+id/store_Frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">   // 카테고리 밑 이벤트배너 가로 스크롤바 프레임
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"> // 가로 스크롤바
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">// 레이아웃 설정
+
+                            // 이벤트 배너 1
+
+                            <ImageButton
+                                android:id="@+id/store_Event1"
+                                android:background="@android:color/transparent"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:layout_below="@+id/BestGoods"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/store_event1" />
+
+                            // 이벤트 배너 2
+                            <ImageButton
+                                android:id="@+id/store_Event2"
+                                android:background="@android:color/transparent"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:layout_below="@+id/store_BestGoods"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/store_event2" />
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </FrameLayout> // 이벤트 배너 가로 스크롤 프레임 닫음
+
+
+            <TextView
+                android:id="@+id/store_Recently"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/store_Frame"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="306dp"
+                android:text="최근 본 상품"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/store_Frame"
+                    android:layout_marginStart="430dp"
+                    android:layout_marginTop="10dp"
+                    android:text="더보기"
+                    />
+
+            // 최근 본 상품 가로스크롤 프레임
+            <FrameLayout
+                android:id="@+id/store_RecentFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@+id/store_Recently"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="190dp">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    // 상품 사진과 내용은 세로로 한세트씩 묶어서 가로로 표시해야함
+                    // 첫 LinearLayout을 기본설정인 가로로 감싸고, 안에 한상품씩 세로로 묶음
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        // 최근 본 상품 - 상품1
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/store_RecentlyGoods4"
+                                android:background="@android:color/transparent"
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/store_img3" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="식물"
+                                android:textAlignment="center"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="129,000"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                />
+                        </LinearLayout>
+                        // 최근 본 상품 - 상품1
+
+                        // 최근 본 상품 - 상품2
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/store_RecentlyGoods5"
+                            android:background="@android:color/transparent"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/store_img4" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="식물"
+                            android:textAlignment="center"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="87,000"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            />
+
+                        </LinearLayout>
+                        // 최근 본 상품 - 상품2
+
+                        // 최근 본 상품 - 상품3
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/store_RecentlyGoods6"
+                            android:background="@android:color/transparent"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/store_img5" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="식물"
+                            android:textAlignment="center"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="158,000"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            />
+                    </LinearLayout>
+                        // 최근 본 상품 - 상품3
+
+                    </LinearLayout> // 최근 본 상품 가로로 묶고
+                </HorizontalScrollView> // 가로 스크롤
+            </FrameLayout> // 최근 본 상품 프레임 닫기
+
+
+            <TextView
+                android:id="@+id/store_UserRecommend"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/store_RecentFrame"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="나를 위한 추천 상품"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/store_RecentFrame"
+                android:layout_marginStart="430dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginBottom="300dp"
+                android:text="더보기" />
+
+
+            // 나를 위한 추천상품 1
+
+            <ImageButton
+                android:id="@+id/store_UserRecommendGoods1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/store_UserRecommend"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/store_img6" />
+
+            <TextView
+                android:id="@+id/store_RecommendStore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/store_UserRecommend"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_toRightOf="@+id/store_UserRecommendGoods1"
+                android:text="FLOWERS"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/store_RecommendStore1Title"
+                android:layout_width="207dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/store_RecommendStore1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-25dp"
+                android:layout_toRightOf="@+id/store_UserRecommendGoods1"
+                android:text="관리하기 쉬운 반려식물, 초보자 전문가 모두 기르기 좋은 상품"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/store_Review1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/store_RecommendStore1Title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods1"
+                    android:text="리뷰 25"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/store_Price1"
+                    android:layout_width="207dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/store_Review1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods1"
+                    android:text="20,000"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+
+            // 나를 위한 추천상품 2
+
+            <ImageButton
+                android:id="@+id/store_UserRecommendGoods2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/store_UserRecommendGoods1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/store_img7" />
+
+                <TextView
+                    android:id="@+id/store_RecommendStore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/store_Price1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods2"
+                    android:text="그린가든"
+                    android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/store_RecommendStore2Title"
+                android:layout_width="207dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="629dp"
+                android:layout_toRightOf="@+id/store_UserRecommendGoods2"
+                android:text="[그린가든] 관상용, 선물용, 공기정화 식물, 사무실 책상 위 진열]"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/store_Review2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/store_RecommendStore2Title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods2"
+                    android:text="리뷰 185"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/store_Price2"
+                    android:layout_width="207dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/store_Review2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods2"
+                    android:text="15,000"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            // 나를 위한 추천상품 3
+                <ImageButton
+                    android:id="@+id/store_UserRecommendGoods3"
+                    android:background="@android:color/transparent"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/store_UserRecommendGoods2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/store_img8"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/store_RecommendStore3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/store_Price2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods3"
+                    android:text="식물마트"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/store_RecommendStore3Title"
+                    android:layout_width="207dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/store_RecommendStore3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-25dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods3"
+                    android:text="[선물용] 초보집사에게 맞는 추천 식물, 현재 배달비 무료 이벤트 중"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/store_Review3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/store_RecommendStore3Title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods3"
+                    android:text="리뷰 89"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/store_Price3"
+                    android:layout_width="207dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/store_Review3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-30dp"
+                    android:layout_toRightOf="@+id/store_UserRecommendGoods3"
+                    android:text="58,000"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
+
+</RelativeLayout>

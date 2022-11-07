@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_array">
+        <item>구절초</item>
+        <item>백량금</item>
+        <item>선인장</item>
+        <item>스투키</item>
+        <item>옥잠화</item>
+        <item>해바라기</item>
+        <item>프리지아</item>
+    </string-array>
+</resources>

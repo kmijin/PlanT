@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usersetting.usersetting_UserSetting">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/backgroud"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
+        android:background="@color/backgroud"
+        tools:layout_editor_absoluteX="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_setting_user"
+                android:layout_width="150dp"
+                android:layout_height="152dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/store_ic_round"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="30dp" />
+
+            <TableLayout
+
+                android:id="@+id/setting_user"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_setting_user"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_setting_user"
+                app:layout_constraintVertical_bias="1.0">
+
+                //이메일
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_stemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="이메일"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/et_stemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:ems="10"
+                        android:hint="email"
+                        android:inputType="textEmailAddress" />
+                </TableRow>
+
+                //비밀번호
+
+                //닉네임
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="비밀번호"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_stpwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:ems="10"
+                        android:hint="password"
+                        android:inputType="textPassword" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="닉네임"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/et_stnick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:ems="10"
+                        android:hint="닉네임"
+                        android:inputType="textPersonName" />
+
+                </TableRow>
+
+                //성별
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="성별"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/btn_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="여성" />
+
+                        <RadioButton
+                            android:id="@+id/btn_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="남성" />
+                    </RadioGroup>
+                </TableRow>
+
+                //생일
+                //달력 선택하면 날짜 입력되는거 추가
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_stbirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="생년월일"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_stbirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:ems="10"
+                        android:hint="생년월일"
+                        android:inputType="date" />
+
+                </TableRow>
+
+                //핸드폰번호
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_stph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="핸드폰"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_stph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:ems="10"
+                        android:hint="핸드폰번호"
+                        android:inputType="phone" />
+                </TableRow>
+
+                //우편번호
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_stpostcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="우편번호"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_stpostcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:ems="10"
+                        android:hint="우편번호"
+                        android:inputType="phone" />
+                </TableRow>
+
+                //주소
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_stadr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="상세주소"
+                        android:textColor="@color/colortext"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_stadr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:ems="10"
+                        android:hint="상세주소"
+                        android:inputType="phone" />
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btn_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/setting_user"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="35dp"
+                android:backgroundTint="@color/maincolor"
+                android:text="수정하기"
+                app:layout_constraintTop_toBottomOf="@id/setting_user"
+                tools:layout_editor_absoluteX="2dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

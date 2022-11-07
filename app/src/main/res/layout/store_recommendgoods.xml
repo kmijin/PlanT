@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182">//수경식물
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/store_recommend8"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#수경식물"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182">//씨앗/모종
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/store_recommend5"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#씨앗/모종"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="33dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.61"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/store_recommend7"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#관리용품"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="33dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181">//선인장
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/store_recommend6"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#선인장"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">//다육식물
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/store_recommend4"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#다육식물"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">//공기정화
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/store_recommend3"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#공기정화"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">//인테리어
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/store_recommend2"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#인테리어"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_LinearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="39dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">//초보집사
+
+        <ImageButton
+            android:id="@+id/store_RecommendBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@drawable/store_recommend1"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#초보집사"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="181dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/store_ImageView2"
+        android:layout_width="400dp"
+        android:layout_height="380dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/recommand2" />
+
+    <TextView
+        android:id="@+id/store_TextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 식물"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.427" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+
+    android:orientation="vertical"
+    tools:context=".home.home_MainFragment">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_TopLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/backgroud">
+
+                <ImageView
+                    android:id="@+id/imagemenu"
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/store_ic_hamburger"
+                    android:tint="@color/colortext"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_btn_search"
+                    android:layout_width="35dp"
+                    android:layout_height="38dp"
+                    android:foregroundGravity="bottom|center"
+                    android:gravity="end"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.978"
+                    app:layout_constraintStart_toEndOf="@+id/imagemenu"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/post_search"
+                    app:tint="@color/colortext" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/post_TopLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/main_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="2"
+                        app:sliderStartAutoCycle="true">
+
+                    </com.smarteist.autoimageslider.SliderView>
+
+                    <TextView
+                        android:id="@+id/myplant_manage"
+                        android:layout_width="136dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/main_slider"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="내 식물관리"
+                        android:textColor="#151515"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    //내식물 관리
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/myplant_manage_card"
+                        android:layout_width="380dp"
+                        android:layout_height="142dp"
+                        android:layout_below="@+id/myplant_manage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:id="@+id/home_mangerImg"
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/store_icon" />
+
+                        <ImageView
+                            android:id="@+id/btn_myplant"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|right"
+                            android:layout_margin="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/home_ic_more" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="182dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginRight="25dp">
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  물주기가"
+                                android:textSize="20dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.031"
+                                app:layout_constraintStart_toEndOf="@+id/tv_manager_plantname"
+                                tools:layout_editor_absoluteY="6dp" />
+
+                            <TextView
+                                android:id="@+id/tv_manager_plantname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/maincolor"
+                                android:textSize="25dp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_manager_plantdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:textColor="@color/maincolor"
+                                android:textSize="25dp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_manager_plantname" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="일 남았습니다."
+                                android:textSize="20dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tv_manager_plantdate"
+                                app:layout_constraintStart_toEndOf="@+id/tv_manager_plantdate" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/myplant_manage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myplant_manage_card"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="오늘의 추천"
+                        android:textColor="#151515"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/homerecyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myplant_manage2"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    //게시판 추천
+
+                    <TextView
+                        android:id="@+id/recommand_com"
+                        android:layout_width="136dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/homerecyclerView"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="5dp"
+                        android:text="BEST 게시판"
+                        android:textColor="#151515"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recommand_com"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/free"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="자유게시판"
+                                android:textColor="#395A22"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/free_userpfile"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="14dp"
+                                    android:layout_marginTop="9dp"
+                                    android:background="#FFFFFF"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/store_icon"
+                                    app:riv_corner_radius="10dp" />
+
+                                <TextView
+                                    android:id="@+id/free_content"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/free_userpfile"
+                                    android:layout_alignLeft="@id/free_userpfile"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="8dp"
+                                    android:text="꽃이 피었어요!"
+                                    android:textColor="#151515" />
+
+                                <TextView
+                                    android:id="@+id/free_usernic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/free_userpfile"
+                                    android:layout_alignBottom="@id/free_userpfile"
+
+                                    android:layout_marginStart="46dp"
+                                    android:layout_marginLeft="46dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="마음" />
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/free_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="0dp">
+
+                                    <TextView
+                                        android:id="@+id/replycount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="5dp"
+                                        android:text="3"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#151515"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/btn_reply" />
+
+                                    <ImageView
+                                        android:id="@+id/btn_reply"
+                                        android:layout_width="0dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="12dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/home_ic_reply"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/free_likecount" />
+
+                                    <TextView
+                                        android:id="@+id/free_likecount"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:text="124"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#151515"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/btn_like"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/btn_like"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="270dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/home_ic_like"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/view"
+                                android:layout_width="370dp"
+                                android:layout_height="3dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="#787474" />
+
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="10dp"
+                                android:text="질문게시판"
+                                android:textColor="#151515"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/quest_userprofile"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="14dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="#FFFFFF"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/store_icon"
+                                    app:riv_corner_radius="10dp" />
+
+                                <TextView
+                                    android:id="@+id/quset_content"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/quest_userprofile"
+                                    android:layout_alignLeft="@id/quest_userprofile"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="8dp"
+                                    android:text="꽃이 피었어요!"
+                                    android:textColor="#151515" />
+
+                                <TextView
+                                    android:id="@+id/quest_usernick"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/quest_userprofile"
+                                    android:layout_alignBottom="@id/quest_userprofile"
+
+                                    android:layout_marginStart="46dp"
+                                    android:layout_marginLeft="46dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="마음" />
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/quset_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginTop="0dp">
+
+                                    <TextView
+                                        android:id="@+id/replycount1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="5dp"
+                                        android:text="3"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#151515"
+                                        app:layout_constraintBottom_toBottomOf="@+id/btn_reply1"
+                                        app:layout_constraintStart_toEndOf="@+id/btn_reply1"
+                                        app:layout_constraintTop_toTopOf="@+id/btn_reply1" />
+
+                                    <ImageView
+                                        android:id="@+id/btn_reply1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="12dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/home_ic_reply"
+                                        app:layout_constraintBottom_toBottomOf="@+id/quest_likecount"
+                                        app:layout_constraintStart_toEndOf="@+id/quest_likecount"
+                                        app:layout_constraintTop_toTopOf="@+id/quest_likecount" />
+
+                                    <TextView
+                                        android:id="@+id/quest_likecount"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:text="124"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#151515"
+                                        app:layout_constraintBottom_toBottomOf="@+id/btn_like1"
+                                        app:layout_constraintStart_toEndOf="@+id/btn_like1"
+                                        app:layout_constraintTop_toTopOf="@+id/btn_like1" />
+
+                                    <ImageView
+                                        android:id="@+id/btn_like1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="270dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/home_ic_like"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/view1"
+                                android:layout_width="370dp"
+                                android:layout_height="3dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="#787474"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nv_homedrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/home_drawer_header"
+            app:menu="@menu/drawer_menu" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</FrameLayout>

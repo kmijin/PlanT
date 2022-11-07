@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/NaviHome"
+        android:enabled="true"
+        android:icon="@drawable/store_ic_home"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/NaviPlant"
+        android:enabled="true"
+        android:icon="@drawable/store_ic_palnt"
+        android:title="내 정원" />
+
+    <item
+        android:id="@+id/NaviBoard"
+        android:enabled="true"
+        android:icon="@drawable/store_ic_board"
+        android:title="게시판" />
+
+    <item
+        android:id="@+id/NaviStore"
+        android:enabled="true"
+        android:icon="@drawable/store_ic_store"
+        android:title="스토어" />
+
+</menu>

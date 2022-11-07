@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btn_notice"
+        android:icon="@drawable/drawer_ic_bell"
+        android:title="알림설정" />
+    <item
+        android:id="@+id/btn_post"
+        android:icon="@drawable/navi_ic_person"
+        android:title="내 게시글" />
+
+    <item
+        android:id="@+id/btn_bookmark"
+        android:icon="@drawable/drawer_ic_setting"
+        android:title="북마크" />
+    <item
+        android:id="@+id/btn_chat"
+        android:icon="@drawable/drawer_ic_qna"
+        android:title="쪽지" />
+
+    <item
+        android:id="@+id/btn_postsetting"
+        android:icon="@drawable/drawer_ic_logout"
+        android:title="게시판 설정" />
+
+
+</menu>
